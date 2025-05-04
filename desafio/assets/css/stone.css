@@ -1,0 +1,149 @@
+:root {
+  --live-cell: #f0f0f0;
+  --background-color: #bbbbbb;
+  --dead-cell: #0da14b;
+  --background-circle: white;
+  --start-finish: #eeee00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+section {
+  /* width: 880px; */
+  min-height: 660px;
+  background: var(--background-color);
+  margin: 0 auto;
+  padding: 2% 2% 3.5%;
+  /* border: solid black 3px; */
+  border-radius: 2%;
+  display: grid;
+  box-sizing: border-box;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: relative;
+}
+
+cell {
+  background: var(--live-cell);
+  display: inline-block;
+  border: solid black 1px;
+  border-radius: 25%;
+  margin: 1px;
+  display: grid;
+  align-items: center;
+}
+
+.circle {
+  width: 72%;
+  height: 70%;
+  background: #3f48cc;
+  border: solid black 2px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: auto;
+  background-image: url(../nivel-1-pergunta-2/assets/media/img/channels4_profile.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.start,
+.finish {
+  background: var(--start-finish);
+}
+
+.dead {
+  background: var(--dead-cell);
+}
+
+.solver {
+  position: absolute;
+  width: 40%;
+  height: 7%;
+  background: rgb(119, 228, 119);
+  bottom: 1.8%;
+  right: 4%;
+  border-radius: 5px;
+  font-size: 180%;
+  font-weight: bold;
+}
+
+.restart:hover {
+  scale: 1.07;
+  cursor: pointer;
+}
+
+.restart:active {
+  scale: 1.03;
+  transform: translateY(4px);
+}
+
+.sound {
+  position: absolute;
+  width: 8%;
+  height: 7%;
+  border-radius: 50%;
+  bottom: 1.8%;
+  right: 41%;
+  font-size: 180%;
+  background: rgb(119, 228, 119);
+  background-image: url(https://s3.amazonaws.com/appforest_uf/f1677615735333x177064175575274660/sound.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 40px;
+}
+
+.sound:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.sound:active {
+  scale: 1;
+  transform: translateY(4px);
+}
+
+.nosound {
+  position: absolute;
+  width: 8%;
+  height: 7%;
+  border-radius: 50%;
+  bottom: 1.8%;
+  right: 41%;
+  font-size: 180%;
+  background: rgb(119, 228, 119);
+  background-image: url(https://s3.amazonaws.com/appforest_uf/f1677615730603x857271785321474000/nosound.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 40px;
+}
+
+.nosound:hover {
+  scale: 1.1;
+  cursor: pointer;
+}
+
+.nosound:active {
+  scale: 1;
+  transform: translateY(4px);
+}
+
+.tentar_novamente {
+  margin-top: 50px;
+}
